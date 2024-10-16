@@ -1,37 +1,46 @@
 
+let aboutOffset = $("#about").offset().top;
 
+$(window).scroll(function () {
 
-let aboutOffsetTop = $("#about").offset().top;
-let imgSrc = "";
-$(window).scroll(function(){
+    let wScroll = $(window).scrollTop();
 
- let wScroll = $(window).scrollTop();
-
- if (wScroll > aboutOffsetTop - 50) {
-  $("#mainNav").css("backgroundColor", "white");   // Change navbar background to white
-  $("#navColor").css("color", "black"); 
-  
-  $('#navLogo').attr('src','./images/bakery-color.png')// Change text color of nav items to black
-} 
-else {
-  $("#mainNav").css("backgroundColor", "transparent");  // Reset navbar background
-  $("#navColor").css("color", "white");                // Reset nav items to original color (white)
-}
-});
-
+    if (wScroll > aboutOffset) {
+        $("#mainNav").css("backgroundColor", "white");
+        // $("#navColor").css("color", "red");
+        $('nav li a').css('color', 'black');
+        $('#navLogo').attr('src', './images/bakery-color.png');
+     
+    }
+    else {
+        $("#mainNav").css("backgroundColor", "transparent");
+        $('nav li a').css('color', 'white');
+        $('#navLogo').attr('src', './images/bakery-light-1.png');
+       
+    }
+  });
 
 $("#setingIcon").click(function(){
   $('.iconSetDiv').toggle();
 
-  $("#setingIcon").css("color", "blue");  
+  // Toggle color between blue and black
+  if ($('.iconSetDiv').is(':visible')) {
+    $("#setingIcon").css("color", "blue");
+  } else {
+    $("#setingIcon").css("color", "black");
+    $("#carIcon").css("color", "black");
+  }
+});
 
-})
 $("#carIcon").click(function(){
   $('.icontDariv').toggle();
 
   $("#carIcon").css("color", "blue");  
-})
+});
 
+$(".btnIcon").click(function(){
+  $("html,body").animate({ scrollTop: 0 }, 500)
+});
 
 
 

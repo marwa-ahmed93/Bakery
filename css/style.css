@@ -10,6 +10,25 @@ body{
     overflow-x: hidden;
     /* font-family: "Lora", serif; */
 }
+.btnIcon{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    /* background-color: red; */
+    width: 30px;
+    height: 30px;
+    background-color: #c1ab84;
+    border-radius: 50%;
+    z-index: 99999999;
+   text-align: center;
+   padding-top: 3px;
+   cursor: pointer;
+}
+.btnIcon i{
+    color: white;
+    width: 30px;
+    
+}
 #fixedIcon{
 width: 50px;
 height: 100px;
@@ -92,6 +111,9 @@ header p{
  
     font-size: 18px;
   
+}
+header #navColor:hover{
+    color: #c1ab84;
 }
 header .caption{
  text-align: center;
