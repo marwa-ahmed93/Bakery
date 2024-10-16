@@ -5,7 +5,7 @@ $(window).scroll(function () {
 
     let wScroll = $(window).scrollTop();
 
-    if (wScroll > aboutOffset) {
+    if (wScroll > aboutOffset -50) {
         $("#mainNav").css("backgroundColor", "white");
         // $("#navColor").css("color", "red");
         $('nav li a').css('color', 'black');
