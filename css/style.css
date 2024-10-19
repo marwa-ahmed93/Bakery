@@ -1,16 +1,18 @@
-*{
+* {
     box-sizing: border-box;
-   
+
 }
-body{
-  
+
+body {
+
     padding: 0;
     margin: 0;
     font-family: "Alegreya", serif;
     overflow-x: hidden;
     /* font-family: "Lora", serif; */
 }
-.btnIcon{
+
+.btnIcon {
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -20,33 +22,65 @@ body{
     background-color: #c1ab84;
     border-radius: 50%;
     z-index: 99999999;
-   text-align: center;
-   padding-top: 3px;
-   cursor: pointer;
+    text-align: center;
+    padding-top: 3px;
+    cursor: pointer;
+    animation-name: btton;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
 }
-.btnIcon i{
-    color: white;
-    width: 30px;
-    
-}
-#fixedIcon{
-width: 50px;
-height: 100px;
-background-color: white;
-position: absolute;
-top: 200px;
-right: 0;
-position: fixed;
-border-top-left-radius: 5%;
-border-bottom-left-radius: 5%;
-text-align: center;
-z-index: 99999999;
+
+@keyframes btton {
+    0% {
+        transform: translateY(10px)
+    }
+
+    ;
+
+    50% {
+        transform: translateY(5px)
+    }
+
+    ;
+
+    100% {
+        transform: translateY(0px)
+    }
+
+    ;
+
 
 }
-#setingIcon:hover , #carIcon:hover{
+
+.btnIcon i {
+    color: white;
+    width: 30px;
+
+
+}
+
+#fixedIcon {
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    position: fixed;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    text-align: center;
+    z-index: 99999999;
+
+}
+
+#setingIcon:hover,
+#carIcon:hover {
     cursor: pointer;
 }
-.iconSetDiv{
+
+.iconSetDiv {
     background-color: white;
     color: rgb(119, 118, 118);
     position: absolute;
@@ -58,9 +92,10 @@ z-index: 99999999;
     position: fixed;
     display: none;
     z-index: 999999;
-    
+
 }
-.icontDariv{
+
+.icontDariv {
     background-color: white;
     color: rgb(119, 118, 118);
     position: absolute;
@@ -73,7 +108,66 @@ z-index: 99999999;
     z-index: 999999;
 
 }
+.slidePoint{
+    width: 32px;
+    height: 55px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+#point{
+    width: 15px;
+    height: 15px;
+    background-color: #c1ab84;
+    border-radius: 50%; 
+    margin: auto;
+    animation-name: point;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
 
+@keyframes point{
+    0% {
+        transform: translateY(20px);
+        /* width: 15px;
+        height: 15px; */
+
+        width: 0px;
+        height: 0px;
+    }
+
+    ;
+25%{
+    transform: translateY(10px);
+    width: 15px;
+    height: 15px;
+}
+    50% {
+        transform: translateY(10px);
+        width: 15px;
+        height: 15px;
+        /* width: 0px;
+        height: 0px; */
+    }
+
+    ;
+
+    75% {
+        transform: translateY(5px) ;
+        /* width: 0px;
+        height: 0px; */
+        width: 15px;
+        height: 15px;
+    }
+
+   100% {
+        transform: translateY(0px) ;
+        /* width: 0px;
+        height: 0px; */
+   
+    }
+    ;
+}
 /* .slidePoint{
     width: 32px;
     height: 55px;
@@ -83,61 +177,81 @@ z-index: 99999999;
     border-radius: 15px;
     text-align: center;
    position: relative;
-}
+} */
 
-#point{
+/* #point{
     width: 15px;
     height: 15px;
     background-color: red;
     border-radius: 50%;
-    /* position: absolute;
+   position: absolute;
     left: calc(50% - 10px);
-    top: 0;} */ 
-header{
+    top: 0;
+}  */
+
+header {
     background-image: url(../images/drew-coffman-1872.jpg);
     background-size: 100% 100%;
+    background-position: center center;
     height: 100vh;
     color: white;
     position: relative;
 }
-nav{
+
+nav {
     position: fixed;
 }
-header h1{
+
+header h1 {
     font-family: "Lora", serif;
     font-size: 45px;
 }
-header p{
- 
+
+header p {
+
     font-size: 18px;
-  
+
 }
-header #navColor:hover{
+
+header #navColor:hover {
     color: #c1ab84;
 }
-header .caption{
- text-align: center;
- margin-top: 15%;
+
+header .caption {
+    text-align: center;
+    margin-top: 15%;
+  
 }
-header #navColor{
+
+header #navColor {
     color: white;
 }
+
 /* header #navColor:hover{
 color: #c1ab84;
 } */
-.btn_one{
+.btn_one {
     background-color: #c1ab84;
-}
-
-.btn{
-    border: none;
     padding: 15px 25px;
-}
-.btn-2{
-border: solid 1px white;
+
 }
 
-.classIcon li i{
+.btn {
+    border: none;
+    /* padding: 15px 25px; */
+}
+
+.btn-2 {
+    border: solid 1px white;
+    padding: 13px 23px;
+}
+
+.btn_one:hover {
+    background-color: white;
+    color: black !important;
+}
+
+.classIcon li i {
     color: #c1ab84;
     padding: 10px;
     border-radius: 50%;
@@ -147,43 +261,48 @@ border: solid 1px white;
 
 .classIcon h2 {
     color: rgb(119, 118, 118);
-font-weight: 300px;
-font-family: "Lora", serif;
+    font-weight: 300px;
+    font-family: "Lora", serif;
 }
-.fa-users{
+
+.fa-users {
     border-radius: 50%;
-  padding: 12px 10px;
+    padding: 12px 10px;
 
 }
 
-.head_2{
+.head_2 {
     color: rgb(119, 118, 118);
     font-family: "Lora", serif;
-    
-}
-.p_2{
-    color: rgb(160, 156, 156);
-}
-.ourSpan{
-    color: rgb(160, 156, 156);  
+
 }
 
-.caption_3{
+.p_2 {
+    color: rgb(160, 156, 156);
+}
+
+.ourSpan {
+    color: rgb(160, 156, 156);
+}
+
+.caption_3 {
     text-align: center;
     font-family: "Lora", serif;
 }
-.brads{
+
+.brads {
     text-align: center;
 }
 
-.icons li i{
+.icons li i {
     color: white;
     background-color: #c1ab84;
     padding: 10px;
     border-radius: 50%;
- 
+
 }
-.footerSection{
+
+.footerSection {
     background-color: #1f1a11;
     color: rgb(160, 156, 156);
     font-family: "Lora", serif;
@@ -191,42 +310,47 @@ font-family: "Lora", serif;
     font-size: 14px;
     padding-top: 20px;
 }
-.footerSection h5{
+
+.footerSection h5 {
     color: white;
 }
-.footerIcon .line{
+
+.footerIcon .line {
     background-color: gray;
     width: 100%;
     height: 1px;
 }
-.footerImg{
+
+.footerImg {
     background-color: rgb(41, 40, 40);
     text-align: center;
 }
-.footerImg p{
+
+.footerImg p {
     color: rgb(160, 156, 156);
     font-size: 12px;
 }
-.footerImg .icons i{
-    color:rgb(160, 156, 156);
+
+.footerImg .icons i {
+    color: rgb(160, 156, 156);
     padding: 10px;
     border-radius: 50%;
     background-color: #4b4a48;
     margin: 4px;
 }
 
-.mapIframe{
+.mapIframe {
     text-align: center;
 }
 
 
- @media screen and (max-width: 500) {
+@media screen and (max-width: 500) {
     /* Styles for mobile devices */
- 
-    iframe{
-     width: 300px;
-        }
 
-  
- 
- }
+    iframe {
+        width: 300px;
+    }
+
+
+
+}
